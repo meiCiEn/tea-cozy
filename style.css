@@ -1,7 +1,146 @@
+/* Box-sizing fix */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Global Styles */
 body {
+    width: 100%;
     font-family: Helvetica, sans-serif;
     font-size: 22px;
     color: seashell;
     background-color: black;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+li {
+    list-style: none;
+}
+
+figure {
+    padding: 0;
+    margin: 0;
+}
+
+figcaption {
+    text-align: center;
+}
+
+section {
+    margin: auto;
+}
+
+a {
+    color: seashell;
+}
+
+h2, h4 {
+    margin: 5px;
+}
+
+/* Header & Navigation */
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 69px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    border-bottom: 1px solid seashell;
+    background-color: black;
     opacity: 0.9;
+}
+
+#logo {
+    display: flex;
+}
+
+#logo img {
+    height: 50px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+ul.nav-links {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 22px;
+    display: block;
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    margin: 69px auto 0;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+#hero {
+    height: 700px;
+    width: 100%;
+    display: flex;
+    background-image: url(/images/img-mission-background.jpg);
+    justify-content: center;
+    align-items: center;
+}
+
+.title-banner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+#tea-of-the-month {
+    max-width: 1000px;
+}
+
+/* Cards */
+
+ul#cards {
+    display: flex
+; flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.card img {
+    width: 300px;
+    height: 200px;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
 }
