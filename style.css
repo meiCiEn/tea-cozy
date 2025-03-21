@@ -1,9 +1,8 @@
-/* Box-sizing fix */
+/* Global Styles */
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
-/* Global Styles */
 body {
     width: 100%;
     font-family: Helvetica, sans-serif;
@@ -15,13 +14,15 @@ body {
     line-height: 1.6;
 }
 
+/* Reset default list styles */
 li {
     list-style: none;
 }
 
+/* Reset default figure spacing */
 figure {
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 figcaption {
@@ -32,15 +33,22 @@ section {
     margin: auto;
 }
 
+/* Default styling for address tags */
+address {
+    font-style: normal;
+}
+
+/* Links */
 a {
     color: seashell;
+    text-decoration: none;
 }
 
 h2, h4 {
     margin: 5px;
 }
 
-/* Header & Navigation */
+/* Header */
 header {
     display: flex;
     position: fixed;
@@ -49,7 +57,7 @@ header {
     height: 69px;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 10px;
+    padding: 0 10px;
     border-bottom: 1px solid seashell;
     background-color: black;
     opacity: 0.9;
@@ -63,46 +71,47 @@ header {
     height: 50px;
 }
 
+/* Navigation */
 .navbar {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
+    justify-content: flex-end;
 }
 
-ul.nav-links {
+.nav-links {
     display: flex;
     gap: 20px;
     padding: 0;
     margin: 0;
 }
 
-.navbar li {
+.nav-links li {
     list-style: none;
 }
 
-.navbar a {
-    text-decoration: none;
+.nav-links a {
     font-size: 22px;
-    display: block;
     text-decoration: underline;
 }
 
-/* Main Content */
+/* Main content */
 main {
     margin: 69px auto 0;
     max-width: 1200px;
     padding: 20px;
 }
 
+/* Hero section */
 #hero {
+    display: flex;
     height: 700px;
     width: 100%;
-    display: flex;
     background-image: url(/images/img-mission-background.jpg);
     justify-content: center;
     align-items: center;
 }
 
+/* Title banner (shared style for sections) */
 .title-banner {
     display: flex;
     flex-direction: column;
@@ -113,34 +122,90 @@ main {
     padding: 10px;
 }
 
+/* Tea of the month section */
 #tea-of-the-month {
     max-width: 1000px;
 }
 
-/* Cards */
-
+/* Tea cards */
 ul#cards {
-    display: flex
-; flex-wrap: wrap;
-    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    align-content: center;
     gap: 20px;
 }
 
 .card {
     display: flex;
-    margin: 0;
-    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .card img {
     width: 300px;
     height: 200px;
+    margin-bottom: 10px;
 }
 
-/* Responsive Typography */
+/* Locations section */
+#locations {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    background-image: url(/images/img-locations-background.jpg);
+    justify-content: center;
+    align-items: center;
+}
+
+#locations h2 {
+    margin-bottom: 15px;
+}
+
+#location-cards {
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.location-card {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    width: 300px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+}
+
+#contact h2,
+#contact h5 {
+    margin: 5px 0;
+}
+
+#copyright {
+    margin: 10px;
+    text-align: left;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
     body {
         font-size: 18px;
+    }
+
+    .nav-links {
+        gap: 15px;
     }
 }
