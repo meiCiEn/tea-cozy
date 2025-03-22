@@ -154,7 +154,7 @@ ul#cards {
     display: flex;
     flex-direction: column;
     height: 500px;
-    background-image: url(/images/img-locations-background.jpg);
+    background-image: url(images/img-locations-background.jpg);
     justify-content: center;
     align-items: center;
 }
