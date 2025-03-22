@@ -184,9 +184,21 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     padding: 20px;
     background-color: black;
+    color: seashell;
+}
+
+footer p {
+    font-size: 0.83em;
+    font-weight: bold;
+}
+
+#contact {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 #contact h2,
@@ -195,7 +207,13 @@ footer {
 }
 
 #copyright {
-    margin: 10px;
+    align-self: flex-start;
+    width: 100%;
+    padding-left: 20px;
+}
+
+#copyright p {
+    margin: 0;
     text-align: left;
 }
 
